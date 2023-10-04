@@ -33,6 +33,38 @@ body {
 	line-height: 1;
 }
 
+/* Affects the section with the class "custom-section" */
+.custom-section {
+	margin-bottom: 5px;    /* Reduce space below each section */
+}
+
+/* Affects all paragraphs within a "custom-section" */
+.custom-section p {
+	margin-bottom: 5px;  /* Reduce space below each paragraph */
+	padding: 5px 0;      /* Reduce internal vertical spacing */
+	padding-left: 40px;  /* Left indent */
+}
+
+/* Custom small text class */
+.small-text {
+	font-size: 0.8em; 			    /* 80% of normal size */
+	line-height: 0.8;
+	margin-top: 3px !important;     /* Space above the text */
+	margin-bottom: 3px !important;  /* Space below the text */
+}
+
+/* Custom indented paragraph class */
+p.indented {
+	text-indent: 1.5em; /* or whatever length you prefer, e.g., 30px */
+}
+
+/* Custom indented list class */
+ul.custom-list {
+	list-style-type: disc;
+	padding-left: 75px;
+	margin-bottom: 5px;
+}
+
 ol, ul {
 	list-style: none;
 }

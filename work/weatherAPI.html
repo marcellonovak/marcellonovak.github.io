@@ -20,12 +20,91 @@
             <div id="main">
                 <!-- Project Info -->
                 <article id="about" class="panel">
+
+                    <!-- Title -->
                     <header>
                         <h2>Weather API Project</h2>
                     </header>
-                    <p>
-                        Test test test
-                    </p>
+
+                    <!-- Custom section classes to reduce spacing -->
+
+                    <!-- Summary -->
+                    <section class="custom-section">
+                    <h3>Summary</h3>
+                        <p>
+                            Spearheaded the development of several optimized custom tools to fetch, parse, and process
+                            3 years worth of hourly GRIB2 data from API calls to be used for machine learning research. <br>
+                            <span class="small-text">
+                                Read more:
+                                <a href="https://news.erau.edu/headlines/embry-riddle-researchers-use-machine-learning-to-tackle-monsoon-season" target="_blank">
+                                    Embry-Riddle Researchers Use Machine Learning to Tackle Monsoon Season
+                                </a>
+                            </span>
+                        </p>
+                    </section>
+
+                    <!-- Background -->
+                    <section class="custom-section">
+                    <h3>Background</h3>
+                        <p class="indented">
+                            At the end of last year, I joined a Meteorology Research Team at Embry Riddle, where I
+                            was tasked with fetching, parsing, and processing 3 years worth of GRIB2 data. This
+                            processed data would then be fed into a machine learning model to predict the onset of
+                            thunderstorms. Arizona has a yearly monsoon season, and thunderstorms have the
+                            highest rainfall rates of the year, so this research would help to mitigate the damages
+                            from flooding, hail, etc.
+                        </p>
+
+                    </section>
+
+                    <!-- Details -->
+                    <section class="custom-section">
+                    <h3>Details</h3>
+                        <p>
+                            This research project was broken down into two major tasks:
+                        </p>
+                        <ul class="custom-list">
+                            <li>Downloading all the data from API calls</li>
+                            <li>Converting all the data into a time-series CSV for each point</li>
+                        </ul>
+                        <p class="indented">
+                            The API calls were rather simple to tackle, I created a program to make a call for each
+                            hour from a start time, and then iterate a datetime variable until an end time was reached.
+                            The API documentation was tricky to understand, especially the regex passed to it, but with
+                            some tinkering I was able to download the data in roughly 20 hours.
+                        </p>
+                        <p class="indented">
+                            The time series conversion on the other hand was more challenging. The data was in grib2
+                            format, and the task was to create a time series CSV for each point in the grid with
+                            columns for each variable, and a row for each timestamp. Mind you, there was over 100,000
+                            points in the grid, with over 100 variable "layers", and a file every hour for 3 years.
+                            Safe to say optimization was the name of the game here.
+                        </p>
+                        <p class="indented">
+                            Before I get into the optimizations I made, I'll explain the data processing pipeline.
+                            You can think of GRIB2 files as a stack of papers, with each paper being a variable layer.
+                            The whole stack covers the same geographic area, but the papers in the stack contain different
+                            variables. On top of this, there can be multiple levels for those variables, such as
+                            temperature at 750/800/1000K.
+                        </p>
+                        <p class="indented">
+                            Ok TODO: create an image of the whole conversion bit of the x y z nonsense and explain it
+                        </p>
+                    </section>
+
+                    <!-- Challenges -->
+                    <section class="custom-section">
+                    <h3>Challenges</h3>
+                        <p>Quisque euismod ipsum ut sem malesuada, ut tempus quam condimentum. In lacinia sapien et
+                            elit rutrum, id aliquet massa interdum.</p>
+                    </section>
+
+                    <!-- Outcomes -->
+                    <section class="custom-section">
+                    <h3>Outcomes</h3>
+                        <p>Sed ut lectus sit amet lorem sollicitudin vehicula at vel nisl. Fusce eget augue sed
+                            lorem ultrices fermentum a a libero.</p>
+                    </section>
 
                     <p>
                         <a href="../index.html">Back Home</a>
