@@ -131,7 +131,6 @@
                         <pre class="custom-code-block"><code class="language-python custom-code-text">
 # Function to process a sub grid in the GRB file
 def process_sub_grid(current_sub_grid):
-    current_values = current_sub_grid.values.ravel()  # Get the values from all the grid cells
     current_values = np.where(np.ma.getmask(current_values), np.nan, current_values)
     current_column = f"{current_sub_grid.name}: {current_sub_grid.level} {current_sub_grid.units}"  # Create column name
     return current_column, current_values
