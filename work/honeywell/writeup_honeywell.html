@@ -1,0 +1,149 @@
+<!DOCTYPE HTML>
+<!--
+    Astral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Marcello Novak</title>
+        <link rel="shortcut icon" href="../../assets/css/images/icon.ico" type="image/x-icon">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+
+        <!-- Linking Prism CSS for syntax highlighting -->
+        <link rel="stylesheet" href="../../assets/css/prism.css" />
+    </head>
+
+    <body class="is-preload">
+        <!-- Content -->
+        <div id="wrapper">
+            <div id="main">
+                <!-- Project Info -->
+                <article id="about" class="panel">
+
+                    <!-- Title -->
+                    <header>
+                        <h2>Honeywell ANTHEM Summer 2025 Internship</h2>
+                    </header>
+
+                    <!-- Summary -->
+                    <section class="custom-section">
+                        <h3>Summary</h3>
+                        <p>
+                            Worked as a software engineering intern at Honeywell Aerospace, focusing on developing a
+                            improved testing UI for the ANTHEM Remote Digital Audio Unit (RDAU) using Python and C++.
+                            Networked across software and hardware, implementing realtime access control and 
+                            interfacing with embedded hardware systems.
+                        </p>
+                    </section>
+
+                    <!-- Background -->
+                    <section class="custom-section">
+                        <h3>Background</h3>
+                        <p class="indented">
+                            Over the summer of 2025, I had the opportunity to work with Honeywell Aerospace in Phoenix, Arizona, 
+                            developing software tools for the ANTHEM program, their next-gen avionics system. I was working directly
+                            under the software team, focusing on the audio (RDAU) component of the system. 
+                        </p>
+                        <p class="indented">
+                            The existing testing UI for the RDAU had issues with high latency, resulting in test routines taking
+                            hours to complete, costing time and resources. My task was to create a new UI that would reduce command 
+                            latency, with the goal of reducing time spent on tests in the lab. The desired end result was higher modularity, 
+                            usability, and testing efficiency.
+                        </p>      
+                    </section>
+
+                    <!-- Details -->
+                    <section class="custom-section">
+                        <h3>Details</h3>
+                        <p class="indented">
+                            As stated above, the legacy testing UI had issues with high latency. This was primarily due to the use of serial
+                            communication, which created bottlenecks in the data transfer process. The existing legacy architecture is shown
+                            below with the following diagram:
+                        </p>
+                            
+                        <img src="rdau_legacy.svg" alt="RDAU Legacy UI" class="custom-image"/>
+
+                        <p class="indented">
+                            My design focused on creating a new UI that would reduce command latency by implementing a more efficient communication 
+                            protocol, with a more intuitive user interface. The end solution implemented UDP for communication, which allowed for
+                            faster data transfer and reduced latency, along with a multithreaded python UI to allow for real-time updates and interactions.
+                            The new architecture is shown below:
+                        </p>
+
+                        <img src="rdau_architecture.svg" alt="RDAU New UI" class="custom-image"/>
+                        
+                    </section>
+
+                    <!-- Challenges -->
+                    <section class="custom-section">
+                        <h3>Challenges</h3>
+                        <p class="indented">
+                            The main challenges faced during this project were related to designing the communication protocol and optimizing the python UI code
+                            to improve performance. In terms of the communication protocol, I had to ensure that all data was transmitted reliably, while being
+                            able to pack and unpack data efficiently. This required optimizing the data structures used, as well as implementing error handling 
+                            mechanisms to ensure data integrity. For the python UI, on`e of the major optimizations was to only load the necessary UI components
+                            for each page, rather than loading unseen components in the background. This reduced memory usage, and increased performance via
+                            culling, which was significant for a python based application.
+                        </p>
+                        <p class="indented">
+                            Aside from the technical challenges related to the UI, I also faced challenges in terms of integrating with the existing hardware, and 
+                            altering existing embedded software to work with the new communication protocols. This required close collaboration with the designer of
+                            the legacy system, as their experience with the system was invaluable in efficiently implementing the new protocols.
+                    </section>
+
+                    <!-- Outcomes -->
+                    <section class="custom-section">
+                        <h3>Outcomes</h3>
+                        <p class="indented">
+                            At the end of my internship, the new UI prototype was successfully implemented, resulting in an average command time of 125ms, down from
+                            3 seconds with the legacy system. This was a significant improvement, and allowed for much faster testing routines in the lab. The new UI
+                            also provided a more intuitive user experience, with a modern design and improved usability. The project was well received by the team, 
+                            and I was able to contribute to the overall success of the ANTHEM program.
+                        </p>
+                        <p class="indented">
+                            Apart from the technical aspects, I also gained valuable experience in top-level design, embedded and realtime systems coding,  
+                            collaborating with more senior engineers, networking protocols, multithreaded design, access control, and working in a professional 
+                            engineering environment. This internship provided me with invaluable insights into the aerospace industry as a whole, and I am grateful
+                            for the opportunity to work with such a talented team at Honeywell Aerospace.
+                        </p>
+                    </section>
+
+                    <!-- Backlink -->
+                    <p>
+                        <a href="../../index.html">Back Home</a>
+                    </p>
+
+                </article>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Marcello Novak</li>
+                <li>
+                    <a href="https://github.com/marcellonovak/" target="_blank">
+                        <i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/marcellonovak/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>Template: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/browser.min.js"></script>
+        <script src="../../assets/js/breakpoints.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script>
+
+        <!-- Linking Prism JavaScript for syntax highlighting -->
+        <script src="../../assets/js/prism.js"></script>
+    </body>
+
+</html>
