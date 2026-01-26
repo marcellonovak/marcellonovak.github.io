@@ -20,11 +20,12 @@
 
 				<!-- Nav -->
 				<nav id="nav">
-					<a href="#"        class="icon solid fa-user">     		   <span>Home    </span></a>
-					<a href="#work"	   class="icon solid fa-folder">   		   <span>Work    </span></a>
-					<a href="#about"   class="icon solid fa-magnifying-glass"> <span>About Me</span></a>
-					<a href="#resume"  class="icon solid fa-file-lines">	   <span>Resume  </span></a>
-					<a href="#contact" class="icon solid fa-envelope"> 		   <span>Contact </span></a>
+					<a href="#"         class="icon solid fa-user">     		<span>Home</span>     </a>
+					<a href="#about"    class="icon solid fa-magnifying-glass"> <span>About Me</span> </a>
+					<a href="#projects"	class="icon solid fa-compass-drafting">	<span>Projects</span> </a>	
+					<a href="#work"	    class="icon solid fa-folder">   		<span>Work</span>     </a>
+					<a href="#resume"   class="icon solid fa-file-lines">	    <span>Resume</span>   </a>
+					<a href="#contact"  class="icon solid fa-envelope"> 		<span>Contact</span>  </a>
 				</nav>
 
 				<!-- Main -->
@@ -36,11 +37,14 @@
 							<h1>Marcello Novak</h1>
 							<p>ERAU CE 2026</p>
 						</header>
+
+						<!-- Shortcut arrow straight to work page -->
 						<a href="#work" class="jumplink pic">
 							<span class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
 							<img src="images/headshot.png" alt="Headshot Cover Photo" />
 						</a>
 					</article>
+
 
 					<!-- About -->
 					<article id="about" class="panel">
@@ -82,6 +86,60 @@
 						</p>
 					</article>
 
+
+					<!-- Project Experience -->
+					 <article id="projects" class="panel">
+						<header>
+							<h2>Projects</h2>
+						</header>
+						<p>
+							A collection of personal and academic projects I've worked on.
+						</p>
+						<section>
+							<div class="row">
+
+								<!-- JPL LLM Capstone Page -->
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="/projects/capstone/writeup_capstone.html" class="image fit">
+										<img src="images/projects/cover_capstone.png" alt="JPL LLM Capstone Project"></a>
+								</div>
+
+								<!-- Confidential Computing Research Page -->
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="/projects/confcompute/writeup_confcompute.html" class="image fit">
+										<img src="images/projects/cover_confcompute.png" alt="Confidential Computing Research"></a>
+								</div>
+								
+								<!-- Arch Linux Forum Posts Page -->
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="/projects/archforums/writeup_archlinux.html" class="image fit">
+										<img src="images/projects/cover_archlinuxforums.png" alt="Arch Linux Forum Posts"></a>
+								</div>
+
+								<!-- Portfolio Website Page -->
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="/projects/portfolio/writeup_portfolio.html" class="image fit">
+										<img src="images/projects/cover_portfoli.png" alt="Portfolio Website"></a>
+								</div>
+
+								<!-- Homelab Networking Page-->
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="/projects/homelab/writeup_homelab.html" class="image fit">
+										<img src="images/projects/cover_homelab.png" alt="Homelab Networking"></a>
+								</div>
+
+								<!-- Sample Entry: --/>
+								<div class="col-4 col-6-medium col-12-small">
+									<a href="#" class="image fit">
+										<img src="images/pic10.jpg" alt=""></a>
+								</div> 
+								<--------------------->
+								
+							</div>
+						</section>
+					</article>
+
+
 					<!-- Work Experience -->
 					<article id="work" class="panel">
 						<header>
@@ -92,31 +150,26 @@
 						</p>
 						<section>
 							<div class="row">
+								
 								<!-- Capula Internship Page -->
 								<div class="col-4 col-6-medium col-12-small">
 									<a href="/work/capula/writeup_capula.html" class="image fit">
-										<img src="images/cover_capula.png" alt="Capula Internship"></a>
+										<img src="images/work/cover_capula.png" alt="Capula Internship"></a>
 								</div>
 								<!-- GRIB2 Weather Page -->
 								<div class="col-4 col-6-medium col-12-small">
 									<a href="/work/eager/writeup_eager.html" class="image fit">
-										<img src="images/cover_eager.png" alt="Eager Research Project"></a>
+										<img src="images/work/cover_eager.png" alt="Eager Research Project"></a>
 								</div>
 								<!-- Honeywell ANTHEM Internship -->
 								<div class="col-4 col-6-medium col-12-small">
 									<a href="/work/honeywell/writeup_honeywell.html" class="image fit">
-										<img src="images/cover_honeywell.png" alt="Honeywell ANTHEM Internship"></a>
+										<img src="images/work/cover_honeywell.png" alt="Honeywell ANTHEM Internship"></a>
 								</div>
-
-								<!-- Sample
-								<div class="col-4 col-6-medium col-12-small">
-									<a href="#" class="image fit">
-										<img src="images/pic10.jpg" alt=""></a>
-								</div>
-								-->
 							</div>
 						</section>
 					</article>
+
 
 					<!-- Resume -->
 					<article id="resume" class="panel">
@@ -140,42 +193,45 @@
 						</p>
 					</article>
 
+
 					<!-- Contact -->
-						<article id="contact" class="panel">
-							<header>
-								<h2>Contact Me</h2>
-							</header>
-							<form action="https://formspree.io/f/xrgvrkrp" method="POST">
-								<div>
-									<div class="row">
-										<div class="col-6 col-12-medium">
-											<label>
-												<input type="text" name="name" placeholder="Name" />
-											</label>
-										</div>
-										<div class="col-6 col-12-medium">
-											<label>
-												<input type="text" name="email" placeholder="Email" />
-											</label>
-										</div>
-										<div class="col-12">
-											<label>
-												<input type="text" name="subject" placeholder="Subject" />
-											</label>
-										</div>
-										<div class="col-12">
-											<label>
-												<textarea name="message" placeholder="Message" rows="6"></textarea>
-											</label>
-										</div>
-										<div class="col-12">
-											<input type="submit" value="Send Message" />
-										</div>
+					<article id="contact" class="panel">
+						<header>
+							<h2>Contact Me</h2>
+						</header>
+						<form action="https://formspree.io/f/xrgvrkrp" method="POST">
+							<div>
+								<div class="row">
+									<div class="col-6 col-12-medium">
+										<label>
+											<input type="text" name="name" placeholder="Name" />
+										</label>
+									</div>
+									<div class="col-6 col-12-medium">
+										<label>
+											<input type="text" name="email" placeholder="Email" />
+										</label>
+									</div>
+									<div class="col-12">
+										<label>
+											<input type="text" name="subject" placeholder="Subject" />
+										</label>
+									</div>
+									<div class="col-12">
+										<label>
+											<textarea name="message" placeholder="Message" rows="6"></textarea>
+										</label>
+									</div>
+									<div class="col-12">
+										<input type="submit" value="Send Message" />
 									</div>
 								</div>
-							</form>
-						</article>
+							</div>
+						</form>
+					</article>
+
 				</div>
+
 
 				<!-- Footer -->
 				<div id="footer">
