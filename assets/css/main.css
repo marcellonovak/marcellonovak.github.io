@@ -45,6 +45,12 @@ body {
 	padding-left: 40px;  /* Left indent */
 }
 
+/* Affects all list items within a "custom-section" */
+.custom-section ul {
+    margin-left: 2rem; /* This creates the "tab" indentation */
+    list-style-position: outside; /* Keeps bullets aligned if text wraps */
+}
+
 /* Custom small text class */
 .small-text {
 	font-size: 0.8em; 			    /* 80% of normal size */

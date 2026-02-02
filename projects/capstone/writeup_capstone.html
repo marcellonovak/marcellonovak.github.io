@@ -26,14 +26,18 @@
 
                     <!-- Title -->
                     <header>
-                        <h2>Title</h2>
+                        <h2>ERAU Capstone Project for JPL</h2>
                     </header>
 
                     <!-- Summary -->
                     <section class="custom-section">
                         <h3>Summary</h3>
                         <p>
-
+                            For my senior capstone at Embry-Riddle, our team collaborated with NASA's Jet Propulsion Laboratory (JPL) 
+                            to evaluate the feasibility of deploying Generative AI on spacecraft. We developed an autonomous 
+                            Large Language Model (LLM) system optimized for a Qualcomm Snapdragon SoC, focusing on offline 
+                            image analysis and decision-making. This project pushed the boundaries of Edge AI, testing whether 
+                            high-level reasoning can survive the extreme resource constraints of deep space.
                         </p>
                     </section>
 
@@ -41,32 +45,87 @@
                     <section class="custom-section">
                         <h3>Background</h3>
                         <p>
-
+                            Deep space missions face a "data bottleneck": high-resolution sensors generate massive amounts of data, 
+                            but communication bandwidth back to Earth is extremely limited. By moving AI processing to the 
+                            "edge" (AKA directly onto the spacecraft), we can enable future opportunities like real-time data filtering, 
+                            autonomous navigation, and astronaut support. Our mission was to build a rigorous testbench on a 
+                            Snapdragon architecture to prove that these models can run reliably without any internet or cloud connectivity.
                         </p>
                     </section>
 
                     <!-- Details -->
                     <section class="custom-section">
                         <h3>Details</h3>
-                        <p>
-
-                        </p>
+                        <ul>
+                            <li>
+                                <b>Hardware: </b> 
+                                Developed and profiled the model for the Snapdragon ARM CPU, 
+                                with stretch goals for GPU/DSP acceleration.
+                            </li>
+                            <li>
+                                <b>Model Optimization: </b> 
+                                Implemented quantization (4-bit/8-bit) and pruning techniques to 
+                                compress the model into a strict 6GB RAM footprint.
+                            </li>
+                            <li>
+                                <b>Data Pipeline: </b> 
+                                Engineered a JSON-based I/O system to ensure the model's outputs were 
+                                structured for autonomous integration with other spacecraft systems.
+                            </li>
+                            <li>
+                                <b>Architecture: </b> 
+                                Evaluated lightweight architectures like TinyLLaMA or DistilBERT to find the 
+                                optimal balance between reasoning capability and power efficiency.
+                            </li>
+                        </ul>
                     </section>
 
                     <!-- Challenges -->
                     <section class="custom-section">
                         <h3>Challenges</h3>
-                        <p>
-
-                        </p>
+                        <ul>
+                            <li>
+                                <b>Resource Constraints: </b>
+                                Operating within a 6GB RAM ceiling required 
+                                aggressive optimization that risked model "hallucinations" or lost accuracy.
+                            </li>
+                            <li>
+                                <b>Reliability: </b>
+                                Addressing the threat of Single Event Upsets (SEU) and 
+                                Double Bit Errors (DBE) which can corrupt model weights in high-radiation environments.
+                            </li>
+                            <li>
+                                <b>Zero Connectivity: </b>
+                                Ensuring the entire stack—from pre-processing 
+                                to inference—functioned in a 100% "air-gapped" environment.
+                            </li>
+                        </ul>
                     </section>
 
                     <!-- Outcomes -->
                     <section class="custom-section">
                         <h3>Outcomes</h3>
-                        <p>
-
-                        </p>
+                        <ul>
+                            <li>
+                                <b>Functional Prototype: </b>
+                                Our primary deliverable: To successfully deploy a quantized LLM on 
+                                Snapdragon hardware, capable of offline image analysis and decision-making.
+                            </li>
+                            <li>
+                                <b>Storage Constraints: </b>
+                                To achive a total footprint (model, weights, and training/input data) of less than 64GB.
+                            </li>
+                            <li>
+                                <b>Documentation: </b>
+                                To deliver a comprehensive Preliminary Design Review (PDR), Test Report, and 
+                                User Manual to JPL for future deployment and development.
+                            </li>
+                            <li>
+                                <b>Validation: </b>
+                                To prove our model and solution meets given spec through 
+                                automated test cases and benchmarking for accuracy and response time.
+                            </li>
+                        </ul>
                     </section>
 
                     <!-- Backlink -->
