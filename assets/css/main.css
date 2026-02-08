@@ -45,6 +45,12 @@ body {
 	padding-left: 40px;  /* Left indent */
 }
 
+/* Affects all list items within a "custom-section" */
+.custom-section ul {
+    margin-left: 2rem; /* This creates the "tab" indentation */
+    list-style-position: outside; /* Keeps bullets aligned if text wraps */
+}
+
 /* Custom small text class */
 .small-text {
 	font-size: 0.8em; 			    /* 80% of normal size */
@@ -70,7 +76,7 @@ ul.custom-list {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 80%;  /* Ensures image is responsive */
+	width: 80%;
 	height: auto;     /* Maintains aspect ratio during scaling */
 	border: 1.5px solid #777777; /* Adds a 2px solid border with the color #777777 (dark grey) */
 	border-radius: 8px; /* Optional: rounds the corners of the border */

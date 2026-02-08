@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<!--
+    Astral by HTML5 UP
+    html5up.net | @ajlkn
+    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+    <head>
+        <title>Marcello Novak</title>
+        <link rel="shortcut icon" href="../../assets/css/images/icon.ico" type="image/x-icon">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../../assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
+
+        <!-- Linking Prism CSS for syntax highlighting -->
+        <link rel="stylesheet" href="../../assets/css/prism.css" />
+    </head>
+
+    <body class="is-preload">
+        <!-- Content -->
+        <div id="wrapper">
+            <div id="main">
+                <!-- Project Info -->
+                <article id="about" class="panel">
+
+                    <!-- Title -->
+                    <header>
+                        <h2>ERAU Capstone Project for JPL</h2>
+                    </header>
+
+                    <!-- Summary -->
+                    <section class="custom-section">
+                        <h3>Summary</h3>
+                        <p class="indented">
+                            For my senior capstone at Embry-Riddle, our team collaborated with NASA's Jet Propulsion Laboratory (JPL) 
+                            to evaluate the feasibility of deploying Generative AI on spacecraft. We developed an autonomous 
+                            Large Language Model (LLM) system optimized for a Qualcomm Snapdragon SoC, focusing on offline 
+                            image analysis and decision-making. This project pushed the boundaries of Edge AI, testing whether 
+                            high-level reasoning can survive the extreme resource constraints of deep space.
+                        </p>
+                    </section>
+
+                    <!-- Background -->
+                    <section class="custom-section">
+                        <h3>Background</h3>
+                        <p class="indented">
+                            Deep space missions face a "data bottleneck": high-resolution sensors generate massive amounts of data, 
+                            but communication bandwidth back to Earth is extremely limited. By moving AI processing to the 
+                            "edge" (AKA directly onto the spacecraft), we can enable future opportunities like real-time data filtering, 
+                            autonomous navigation, and astronaut support. Our mission was to build a rigorous testbench on a 
+                            Snapdragon architecture to prove that these models can run reliably without any internet or cloud connectivity.
+                        </p>
+                    </section>
+
+                    <!-- Details -->
+                    <section class="custom-section">
+                        <h3>Details</h3>
+                        <ul>
+                            <li>
+                                <b>Hardware: </b> 
+                                Developed and profiled the model for the Snapdragon ARM CPU, 
+                                with stretch goals for GPU/DSP acceleration.
+                            </li>
+                            <li>
+                                <b>Models: </b> 
+                                Evaluated lightweight models like TinyLLaMA or DistilBERT to find the 
+                                optimal balance between reasoning capability and power efficiency.
+                            </li>
+                            <li>
+                                <b>Model Optimization: </b> 
+                                Implemented quantization (4-bit/8-bit) and pruning techniques to 
+                                compress the model into a strict 6GB RAM footprint.
+                            </li>
+                            <li>
+                                <b>Data Pipeline: </b> 
+                                Engineered a JSON-based I/O system to ensure the model's outputs were 
+                                structured for autonomous integration with other spacecraft systems.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Architecture -->
+                    <section class="custom-section">
+                        <h3>Architecture</h3>
+                        <p class="indented">
+                            Our system architecture is split into two components: static and dynamic. The 
+                            static section covers the user and storage interfaces, while the dynamic section 
+                            focuses on all subsystems and their interactions, covering the flow of execution 
+                            during development, testing and runtime.
+                        </p>
+
+                        <img src="astra_sysdiag.png" alt="Test Harness" class="custom-image"/>
+
+                        <p class="indented">
+                            For our static architecture, our device interfaces are split into two categories: 
+                            data and user. The data interfaces consist of the model material and output 
+                            directories, stored on the local filesystem. The user interfaces consist of a 
+                            terminal CLI and chatbot GUI, which allow users to interact with the model for
+                            sending queries, loading data, and viewing outputs. The core of our system is the 
+                            GenAI agent, which processes given prompts and images to generate outputs.
+                        </p>
+
+                        <p class="indented">
+                            For our dynamic architecture, the core autonomous portion of our system is the test harness. 
+                            The test harness's role is to execute the GenAI agent against predefined prompt sets paired 
+                            with test images. The test harness orchestrates query execution through a query script, 
+                            monitors performance metrics via a performance tracker, and collects structured outputs 
+                            and metrics for analysis. This architecture enables systematic evaluation of model accuracy, 
+                            response time, and resource utilization, to assess the viability of LLM deployment in space.
+                        </p>
+                        
+                    </section>
+
+                    <!-- Challenges -->
+                    <section class="custom-section">
+                        <h3>Challenges</h3>
+                        <ul>
+                            <li>
+                                <b>Resource Constraints: </b>
+                                Operating within a 6GB RAM ceiling required 
+                                aggressive optimization that risked model "hallucinations" or lost accuracy.
+                            </li>
+                            <li>
+                                <b>Reliability: </b>
+                                Addressing the threat of Single Event Upsets (SEU) and 
+                                Double Bit Errors (DBE) which can corrupt model weights in high-radiation environments.
+                            </li>
+                            <li>
+                                <b>Zero Connectivity: </b>
+                                Ensuring the entire stack—from pre-processing 
+                                to inference—functioned in a 100% "air-gapped" environment.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Outcomes -->
+                    <section class="custom-section">
+                        <h3>Outcomes</h3>
+                        <ul>
+                            <li>
+                                <b>Functional Prototype: </b>
+                                Our primary deliverable: To successfully deploy a quantized LLM on 
+                                Snapdragon hardware, capable of offline image analysis and decision-making.
+                            </li>
+                            <li>
+                                <b>Storage Constraints: </b>
+                                To achive a total footprint (model, weights, and training/input data) of less than 64GB.
+                            </li>
+                            <li>
+                                <b>Documentation: </b>
+                                To deliver a comprehensive Preliminary Design Review (PDR), Test Report, and 
+                                User Manual to JPL for future deployment and development.
+                            </li>
+                            <li>
+                                <b>Validation: </b>
+                                To prove our model and solution meets given spec through 
+                                automated test cases and benchmarking for accuracy and response time.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!-- Backlink -->
+                    <p>
+                        <a href="../../index.html">Back Home</a>
+                    </p>
+
+                </article>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; Marcello Novak</li>
+                <li>
+                    <a href="https://github.com/marcellonovak/" target="_blank">
+                        <i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/marcellonovak/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i></a>
+                </li>
+                <li>Template: <a href="https://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../../assets/js/jquery.min.js"></script>
+        <script src="../../assets/js/browser.min.js"></script>
+        <script src="../../assets/js/breakpoints.min.js"></script>
+        <script src="../../assets/js/util.js"></script>
+        <script src="../../assets/js/main.js"></script>
+
+        <!-- Linking Prism JavaScript for syntax highlighting -->
+        <script src="../../assets/js/prism.js"></script>
+    </body>
+
+</html>
