@@ -32,7 +32,7 @@
                     <!-- Summary -->
                     <section class="custom-section">
                         <h3>Summary</h3>
-                        <p>
+                        <p class="indented">
                             For my senior capstone at Embry-Riddle, our team collaborated with NASA's Jet Propulsion Laboratory (JPL) 
                             to evaluate the feasibility of deploying Generative AI on spacecraft. We developed an autonomous 
                             Large Language Model (LLM) system optimized for a Qualcomm Snapdragon SoC, focusing on offline 
@@ -44,7 +44,7 @@
                     <!-- Background -->
                     <section class="custom-section">
                         <h3>Background</h3>
-                        <p>
+                        <p class="indented">
                             Deep space missions face a "data bottleneck": high-resolution sensors generate massive amounts of data, 
                             but communication bandwidth back to Earth is extremely limited. By moving AI processing to the 
                             "edge" (AKA directly onto the spacecraft), we can enable future opportunities like real-time data filtering, 
@@ -63,6 +63,11 @@
                                 with stretch goals for GPU/DSP acceleration.
                             </li>
                             <li>
+                                <b>Models: </b> 
+                                Evaluated lightweight models like TinyLLaMA or DistilBERT to find the 
+                                optimal balance between reasoning capability and power efficiency.
+                            </li>
+                            <li>
                                 <b>Model Optimization: </b> 
                                 Implemented quantization (4-bit/8-bit) and pruning techniques to 
                                 compress the model into a strict 6GB RAM footprint.
@@ -72,12 +77,39 @@
                                 Engineered a JSON-based I/O system to ensure the model's outputs were 
                                 structured for autonomous integration with other spacecraft systems.
                             </li>
-                            <li>
-                                <b>Architecture: </b> 
-                                Evaluated lightweight architectures like TinyLLaMA or DistilBERT to find the 
-                                optimal balance between reasoning capability and power efficiency.
-                            </li>
                         </ul>
+                    </section>
+
+                    <!-- Architecture -->
+                    <section class="custom-section">
+                        <h3>Architecture</h3>
+                        <p class="indented">
+                            Our system architecture is split into two components: static and dynamic. The 
+                            static section covers the user and storage interfaces, while the dynamic section 
+                            focuses on all subsystems and their interactions, covering the flow of execution 
+                            during development, testing and runtime.
+                        </p>
+
+                        <img src="astra_sysdiag.png" alt="Test Harness" class="custom-image"/>
+
+                        <p class="indented">
+                            For our static architecture, our device interfaces are split into two categories: 
+                            data and user. The data interfaces consist of the model material and output 
+                            directories, stored on the local filesystem. The user interfaces consist of a 
+                            terminal CLI and chatbot GUI, which allow users to interact with the model for
+                            sending queries, loading data, and viewing outputs. The core of our system is the 
+                            GenAI agent, which processes given prompts and images to generate outputs.
+                        </p>
+
+                        <p class="indented">
+                            For our dynamic architecture, the core autonomous portion of our system is the test harness. 
+                            The test harness's role is to execute the GenAI agent against predefined prompt sets paired 
+                            with test images. The test harness orchestrates query execution through a query script, 
+                            monitors performance metrics via a performance tracker, and collects structured outputs 
+                            and metrics for analysis. This architecture enables systematic evaluation of model accuracy, 
+                            response time, and resource utilization, to assess the viability of LLM deployment in space.
+                        </p>
+                        
                     </section>
 
                     <!-- Challenges -->
